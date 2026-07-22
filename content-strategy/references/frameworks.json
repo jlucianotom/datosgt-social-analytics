@@ -1,0 +1,929 @@
+{
+  "source": "https://github.com/WynterJones/CoppieGPT",
+  "frameworks": [
+    {
+      "name": "AIDA",
+      "structure": "Attention, Interest, Desire, Action"
+    },
+    {
+      "name": "PAS",
+      "structure": "Problem, Agitate, Solution"
+    },
+    {
+      "name": "BAB",
+      "structure": "Before, After, Bridge"
+    },
+    {
+      "name": "4 Cs",
+      "structure": "Clear, Concise, Compelling, Credible"
+    },
+    {
+      "name": "4 Ps",
+      "structure": "Promise, Picture, Proof, Push"
+    },
+    {
+      "name": "4 Us",
+      "structure": "Urgent, Unique, Ultra-specific, Useful"
+    },
+    {
+      "name": "FAB",
+      "structure": "Features, Advantages, Benefits"
+    },
+    {
+      "name": "QUEST",
+      "structure": "Qualify, Understand, Educate, Stimulate, Transition"
+    },
+    {
+      "name": "ACCA",
+      "structure": "Awareness, Comprehension, Conviction, Action"
+    },
+    {
+      "name": "OATH",
+      "structure": "Oblivious, Apathetic, Thinking, Hurting"
+    },
+    {
+      "name": "APP",
+      "structure": "Agree, Promise, Preview"
+    },
+    {
+      "name": "RECIPE",
+      "structure": "Relatable, Emotional, Credible, Informative, Persuasive, Engaging"
+    },
+    {
+      "name": "The Rule of Three",
+      "structure": "Triadic structures for emphasis and memorability"
+    },
+    {
+      "name": "The 6+1 Model",
+      "structure": "Clarity, Simplicity, Brevity, Humanity, Wit, Surprise, plus a strong Call-to-Action"
+    },
+    {
+      "name": "SCQA",
+      "structure": "Situation, Complication, Question, Answer"
+    },
+    {
+      "name": "KISS",
+      "structure": "Keep It Short and Simple"
+    },
+    {
+      "name": "SUCCES",
+      "structure": "Simple, Unexpected, Concrete, Credible, Emotional, Stories"
+    },
+    {
+      "name": "SOAP",
+      "structure": "Subject, Objective, Action, Problem"
+    },
+    {
+      "name": "PPPP",
+      "structure": "Picture, Promise, Prove, Push"
+    },
+    {
+      "name": "SLAP",
+      "structure": "Stop, Look, Act, Purchase"
+    },
+    {
+      "name": "STAR",
+      "structure": "Situation, Task, Action, Result"
+    },
+    {
+      "name": "3-Act Structure",
+      "structure": "Setup, Confrontation, Resolution"
+    },
+    {
+      "name": "PASTOR",
+      "structure": "Problem, Amplify, Solution, Testimonials, Offer, Response"
+    },
+    {
+      "name": "WWHW",
+      "structure": "Why, What, How, What If"
+    },
+    {
+      "name": "VAD",
+      "structure": "Value, Action, Differentiation"
+    },
+    {
+      "name": "5 Ws",
+      "structure": "Who, What, When, Where, Why"
+    },
+    {
+      "name": "SSS",
+      "structure": "Short, Simple, Strong"
+    },
+    {
+      "name": "2-2-2",
+      "structure": "How to Engage Readers in 2 Minutes, 2 Hours, 2 Days"
+    },
+    {
+      "name": "BRIEF",
+      "structure": "Background, Reason, Information, End, Follow-up"
+    },
+    {
+      "name": "BDA",
+      "structure": "Before, During, After"
+    },
+    {
+      "name": "DIP",
+      "structure": "Data, Insight, Proof"
+    },
+    {
+      "name": "7-Step Story Arc",
+      "structure": "Exposition, Inciting Incident, Rising Action, Climax, Falling Action, Resolution, Denouement"
+    },
+    {
+      "name": "The LIFT Model",
+      "structure": "Value Proposition, Relevance, Clarity, Anxiety, Distraction, Urgency"
+    },
+    {
+      "name": "CAKE",
+      "structure": "Connect, Assure, Key Message, Evidence"
+    },
+    {
+      "name": "SIR",
+      "structure": "State, Illustrate, Relate"
+    },
+    {
+      "name": "TEAR",
+      "structure": "Target, Emotion, Action, Result"
+    },
+    {
+      "name": "PPF",
+      "structure": "Problem, Promise, Future"
+    },
+    {
+      "name": "SODA",
+      "structure": "Situation, Obstacle, Decision, Action"
+    },
+    {
+      "name": "CLAIM",
+      "structure": "Claim, Logic, Authority, Importance, Message"
+    },
+    {
+      "name": "CODA",
+      "structure": "Context, Outcome, Detail, Action"
+    },
+    {
+      "name": "The Hook-Subhook System",
+      "structure": "Hook, Subhook 1, Subhook 2, Subhook 3"
+    },
+    {
+      "name": "The Barstool Test",
+      "structure": "Informal, Engaging, Storytelling"
+    },
+    {
+      "name": "The Power of One",
+      "structure": "Focus on one key message or idea"
+    },
+    {
+      "name": "The 3 R's",
+      "structure": "Relate, Reveal, Resolve"
+    },
+    {
+      "name": "CUB",
+      "structure": "Clear, Useful, Believable"
+    },
+    {
+      "name": "The 5 E's",
+      "structure": "Empathy, Entertainment, Education, Emotion, Execution"
+    },
+    {
+      "name": "The Value Proposition Canvas",
+      "structure": "Customer Profile, Value Map, Fit"
+    },
+    {
+      "name": "The Copywriting Grid",
+      "structure": "Promise, Offer, Price, Time, Objections, Proof"
+    },
+    {
+      "name": "COPY",
+      "structure": "Customer, Offer, Purpose, You"
+    },
+    {
+      "name": "TACTIC",
+      "structure": "Target, Action, Channel, Timing, Integration, Control"
+    },
+    {
+      "name": "BLUR",
+      "structure": "Believable, Lively, Unique, Relevant"
+    },
+    {
+      "name": "Clayton Makepeace's The 4-Legged Stool",
+      "structure": "Promises, Proofs, Benefits, Offers"
+    },
+    {
+      "name": "Ray Edwards' PASTOR",
+      "structure": "Problem, Amplify, Story, Transformation, Offer, Response"
+    },
+    {
+      "name": "Joe Sugarman's The Advertorial",
+      "structure": "Attention, Interest, Story, Body, Solution, Call-to-Action"
+    },
+    {
+      "name": "Bob Bly's The Lead-Gen Model",
+      "structure": "Offer, Deadline, Benefits, Proof, Call-to-Action"
+    },
+    {
+      "name": "Gary Bencivenga's Persuasion Equation",
+      "structure": "Desire + Belief + Exclusivity + Urgency"
+    },
+    {
+      "name": "Gary Halbert's A-Pile/B-Pile",
+      "structure": "Personalization, Envelope Teaser, Headline, Opening, Story, Offer"
+    },
+    {
+      "name": "John Carlton's Simple Writing System",
+      "structure": "Person, Problem, Promise, Proof, Price, P.S."
+    },
+    {
+      "name": "Dan Kennedy's The Godfather Offer",
+      "structure": "Compelling Offer, Scarcity, Risk Reversal, Bonus"
+    },
+    {
+      "name": "Frank Kern's 4 Day Cash Machine",
+      "structure": "Desire, Proof, Offer, Urgency, Scarcity"
+    },
+    {
+      "name": "Jeff Walker's Product Launch Formula",
+      "structure": "Pre-launch, Launch, Post-launch"
+    },
+    {
+      "name": "Perry Belcher's 21-Step Sales Letter Formula",
+      "structure": "Problem, Solution, Benefits, Proof, Offer, Call-to-Action"
+    },
+    {
+      "name": "Eugene Schwartz's Breakthrough Advertising",
+      "structure": "Mass Desire, Unique Mechanism, Proof, Proposition, Close"
+    },
+    {
+      "name": "Ryan Deiss' The Machine",
+      "structure": "Indoctrination, Engagement, Ascension, Segmentation, Re-engagement"
+    },
+    {
+      "name": "Ben Settle's Email Players",
+      "structure": "Entertainment, Infotainment, Storytelling, Personality, Call-to-Action"
+    },
+    {
+      "name": "John Caples' Tested Advertising Methods",
+      "structure": "Headline, Interest, Desire, Conviction, Action"
+    },
+    {
+      "name": "David Ogilvy's How to Create Advertising that Sells",
+      "structure": "Headline, Promise, Image, Copy, Close"
+    },
+    {
+      "name": "Robert Collier's The Robert Collier Letter Book",
+      "structure": "Interest, Desire, Conviction, Action"
+    },
+    {
+      "name": "Michael Masterson's Ready, Fire, Aim",
+      "structure": "Offer, Promise, Proof, Urgency"
+    },
+    {
+      "name": "AWAI's 6-Figure Copywriting",
+      "structure": "Headline, Lead, Body, Close, P.S."
+    },
+    {
+      "name": "Joanna Wiebe's The Conversion Copywriting Guide",
+      "structure": "Clarity, Connection, Conversion"
+    },
+    {
+      "name": "Seth Godin's Permission Marketing",
+      "structure": "Anticipated, Personal, Relevant, Valuable"
+    },
+    {
+      "name": "Brian Clark's Copyblogger",
+      "structure": "Empathy, Story, Solution, Credibility, Action"
+    },
+    {
+      "name": "Joanna Wiebe's Copy Hackers",
+      "structure": "Value, Clarity, Relevance, Immediacy, Urgency"
+    },
+    {
+      "name": "Eben Pagan's Moving the Free Line",
+      "structure": "Free Value, Paid Value, Upsell Value"
+    },
+    {
+      "name": "Dean Jackson's 9-Word Email",
+      "structure": "Short, Personal, Engaging, Open-Ended"
+    },
+    {
+      "name": "Andy Sernovitz's Word of Mouth Marketing",
+      "structure": "Talkers, Topics, Tools, Taking Part"
+    },
+    {
+      "name": "Neville Medhora's Kopywriting Kourse",
+      "structure": "Attention, Interest, Desire, Action, Close"
+    },
+    {
+      "name": "Ramit Sethi's I Will Teach You to Be Rich",
+      "structure": "Pain, Agitation, Solution, Testimonials, Offer"
+    },
+    {
+      "name": "Andre Chaperon's Autoresponder Madness",
+      "structure": "Open Loop, Story, Call-to-Action, Close Loop"
+    },
+    {
+      "name": "Ann Handley's Everybody Writes",
+      "structure": "Goal, Reframe, Seek Data, Organize, Draft, Edit, Rewrite"
+    },
+    {
+      "name": "Russell Brunson's Dotcom Secrets",
+      "structure": "Hook, Story, Offer, Value Ladder, Funnels"
+    },
+    {
+      "name": "Laura Belgray's Talking Shrimp",
+      "structure": "Voice, Story, Humor, Personality, Call-to-Action"
+    },
+    {
+      "name": "Drayton Bird's Commonsense Direct & Digital Marketing",
+      "structure": "Strategy, Tactics, Execution, Measurement"
+    },
+    {
+      "name": "Jon Morrow's Headline Hacks",
+      "structure": "Numbers, How-To, List, Question, Command, Mistake, Prediction"
+    },
+    {
+      "name": "Bond Halbert's The Halbert Copywriting Method",
+      "structure": "Research, Story, Headline, Offer, Call-to-Action"
+    },
+    {
+      "name": "Amy Harrison's Write with Influence",
+      "structure": "Audience, Problem, Promise, Evidence, Solution, Action"
+    },
+    {
+      "name": "Derek Halpern's Social Triggers",
+      "structure": "Psychology, Social Proof, Influence, Trust, Call-to-Action"
+    },
+    {
+      "name": "Marie Forleo's B-School",
+      "structure": "Passion, Profit, Plan, Position, Promotion, Partnerships, Persistence"
+    },
+    {
+      "name": "Don Miller's StoryBrand",
+      "structure": "Character, Problem, Guide, Plan, Call-to-Action, Success, Failure"
+    },
+    {
+      "name": "Nick Usborne's Conversational Copywriting",
+      "structure": "Authentic, Transparent, Engaging, Persuasive, Action"
+    },
+    {
+      "name": "The Veloso Formula",
+      "structure": "Headline, Opening, Credibility, Proof, Offer, Guarantee, Urgency, Close"
+    },
+    {
+      "name": "Collier's Emotional Triggers",
+      "structure": "Fear, Greed, Guilt, Anger, Exclusivity, Salvation, Flattery"
+    },
+    {
+      "name": "Schwartz's Market Sophistication",
+      "structure": "Level 1: Problem and Solution, Level 2: Unique Mechanism, Level 3: Unique Mechanism 2.0, Level 4: Specificity, Level 5: Personal Connection"
+    },
+    {
+      "name": "Henneke's Enchanting Copy",
+      "structure": "Empathy, Clarity, Connection, Personality, Relevance, Persuasion, Storytelling"
+    },
+    {
+      "name": "Cialdini's Principles of Persuasion",
+      "structure": "Reciprocity, Commitment and Consistency, Social Proof, Authority, Liking, Scarcity"
+    },
+    {
+      "name": "Heath Brothers' Made to Stick",
+      "structure": "Simplicity, Unexpectedness, Concreteness, Credibility, Emotions, Stories"
+    },
+    {
+      "name": "Gladwell's Tipping Point",
+      "structure": "The Law of the Few, The Stickiness Factor, The Power of Context"
+    },
+    {
+      "name": "The Skyscraper Technique",
+      "structure": "Find Popular Content, Make It Better, Reach Out to the Right People"
+    },
+    {
+      "name": "The Hero's Journey",
+      "structure": "Ordinary World, Call to Adventure, Refusal of the Call, Meeting the Mentor, Crossing the Threshold, Tests, Allies and Enemies, Approach, Ordeal, Reward, The Road Back, Resurrection, Return with Elixir"
+    },
+    {
+      "name": "Carnegie's How to Win Friends and Influence People",
+      "structure": "Make the Other Person Feel Important, Show Genuine Interest, Be a Good Listener, Talk in Terms of the Other Person's Interests, Make the Other Person Feel Important"
+    },
+    {
+      "name": "Carline Anglade-Cole's T.R.A.C.K. Formula",
+      "structure": "Tease, Reward, Activate, Cement, Knockout Offer"
+    },
+    {
+      "name": "Ken McCarthy's S.T.A.R. Chain",
+      "structure": "Situation, Task, Action, Results"
+    },
+    {
+      "name": "Abbondanza's C.O.R.E. Message",
+      "structure": "Curiosity, Offer, Relevance, Easy"
+    },
+    {
+      "name": "Michael Gerber's E-Myth",
+      "structure": "Entrepreneur, Manager, Technician"
+    },
+    {
+      "name": "Felder's P.A.R.I.S. Formula",
+      "structure": "Promise, Approach, Results, Investment, Summary"
+    },
+    {
+      "name": "The Socratic Method",
+      "structure": "Question, Answer, Elaboration, Example, Conclusion"
+    },
+    {
+      "name": "Seth Godin's Purple Cow",
+      "structure": "Remarkable, Unique, Innovative, Different"
+    },
+    {
+      "name": "Kurtz's 5-Point Copy Checklist",
+      "structure": "Target, Offer, Copy, Design, Timing"
+    },
+    {
+      "name": "Girard's Law of 250",
+      "structure": "Personal Network, Referrals, Word of Mouth"
+    },
+    {
+      "name": "Voss's Negotiation Framework",
+      "structure": "Tactical Empathy, Accusation Audit, Mirroring, Labeling, Calibrated Questions, No Deal, The Black Swan"
+    },
+    {
+      "name": "The 4 M's of Marketing",
+      "structure": "Market, Message, Media, Measurement"
+    },
+    {
+      "name": "Emotional Selling Proposition (ESP)",
+      "structure": "Emotions, Storytelling, Connection, Action"
+    },
+    {
+      "name": "The Dale Carnegie Formula",
+      "structure": "Incident, Action, Benefit"
+    },
+    {
+      "name": "The Classic Sales Letter Blueprint",
+      "structure": "Salutation, Problem, Solution, Proof, Offer, Guarantee, Urgency, Call-to-Action, P.S."
+    },
+    {
+      "name": "Kotler's Marketing Mix (4 Ps)",
+      "structure": "Product, Price, Place, Promotion"
+    },
+    {
+      "name": "The Bow Tie Funnel",
+      "structure": "Awareness, Conversion, Closing, Retention, Advocacy"
+    },
+    {
+      "name": "Hill's Copywriting Triangle",
+      "structure": "Emotional Appeal, Rational Appeal, Moral Appeal"
+    },
+    {
+      "name": "Story Selling Framework",
+      "structure": "Setting, Characters, Conflict, Resolution, Moral"
+    },
+    {
+      "name": "CopyDoodles",
+      "structure": "Visual Elements, Handwritten Notes, Images, Personalization"
+    },
+    {
+      "name": "Golden Circle (Simon Sinek)",
+      "structure": "Why, How, What"
+    },
+    {
+      "name": "The Jigsaw Puzzle Technique",
+      "structure": "Assemble Headline, Subheads, Bullets, Opening, Offer, Guarantee, Close, P.S."
+    },
+    {
+      "name": "Joe Sugarman's Psychological Triggers",
+      "structure": "Consistency, Reciprocity, Social Proof, Liking, Authority, Scarcity, Contrast, Curiosity"
+    },
+    {
+      "name": "The Clayton Makepeace Copywriting Formula",
+      "structure": "Headline, Subhead, Open, Body Copy, Subheads, Call-to-Action, P.S."
+    },
+    {
+      "name": "John Caples' Winning Headline Formula",
+      "structure": "News, Self-interest, Curiosity, Quick & Easy Solution"
+    },
+    {
+      "name": "The Steve Slaunwhite B2B Copywriting Formula",
+      "structure": "Attention, Problem, Solution, Proof, Offer, Call-to-Action, P.S."
+    },
+    {
+      "name": "Chris Marlow's B2B Copywriting Checklist",
+      "structure": "Clarity, Benefits, Promise, Voice, Urgency, Value, Call-to-Action, Guarantee"
+    },
+    {
+      "name": "Robert Bly's Copywriter's Formula",
+      "structure": "Problem, Promise, Solution, Credentials, Benefits, Testimonials, Offer, Risk Reversal, Call-to-Action, P.S."
+    },
+    {
+      "name": "Don Hauptman's Ladders of Abstraction",
+      "structure": "Concrete, Semi-Abstract, Abstract"
+    },
+    {
+      "name": "Parris Lampropoulos's First 100 Words Formula",
+      "structure": "Empathy, Common Enemy, Solution, Promise, Credibility"
+    },
+    {
+      "name": "Jim Rutz's Open Letter Formula",
+      "structure": "Personal Greeting, Opening Story, Problem, Solution, Benefits, Offer, Guarantee, Call-to-Action, P.S."
+    },
+    {
+      "name": "Bob Serling's Power Copywriting Formula",
+      "structure": "Attention, Interest, Credibility, Desire, Proof, Action"
+    },
+    {
+      "name": "The Irresistible Offer Framework",
+      "structure": "Promise, Unique Mechanism, Speed, Proof, No-Risk Guarantee"
+    },
+    {
+      "name": "The UPWORDS Framework",
+      "structure": "Understand, Promise, Win, Objections, Reinforce, Desire, Sign-off"
+    },
+    {
+      "name": "Dan Kennedy's Copywriting Triangle",
+      "structure": "Message, Market, Media"
+    },
+    {
+      "name": "The Copywriting Canvas",
+      "structure": "Headline, Subheadline, Opening, Body, Call-to-Action, P.S."
+    },
+    {
+      "name": "The Quick-Start Copy Formula",
+      "structure": "Attention, Interest, Desire, Proof, Offer, Action"
+    },
+    {
+      "name": "The KFC Formula",
+      "structure": "Know, Feel, Commit"
+    },
+    {
+      "name": "The Secret Sauce Copywriting Formula",
+      "structure": "Problem, Promise, Proof, Proposition, Price, Personality"
+    },
+    {
+      "name": "The 5 Ws and H Formula",
+      "structure": "Who, What, Where, When, Why, How"
+    },
+    {
+      "name": "The Mento-Emotive Framework",
+      "structure": "Mental Imagery, Emotional Connection, Persuasion"
+    },
+    {
+      "name": "The Head-to-Heart Framework",
+      "structure": "Rational Appeal, Emotional Appeal, Moral Appeal"
+    },
+    {
+      "name": "The Instant Gratification Formula",
+      "structure": "Urgency, Simplicity, Results"
+    },
+    {
+      "name": "The Perfect Paragraph Structure",
+      "structure": "Main Idea, Supporting Details, Conclusion"
+    },
+    {
+      "name": "The Magic Bullet Formula",
+      "structure": "Problem, Solution, Unique Mechanism, Benefits, Proof, Guarantee, Offer, Call-to-Action"
+    },
+    {
+      "name": "The S.I.N. Formula",
+      "structure": "State, Illustrate, Navigate"
+    },
+    {
+      "name": "The Power of Three Framework",
+      "structure": "Threes, Repetition, Rhythm"
+    },
+    {
+      "name": "The Curiosity-Driven Headline Formula",
+      "structure": "Benefit, Curiosity, Relevance"
+    },
+    {
+      "name": "The T.O.P. Copywriting Formula",
+      "structure": "Target Audience, Offer, Persuasion"
+    },
+    {
+      "name": "The 5-Point Email Copywriting Formula",
+      "structure": "Subject Line, Opening, Body, Call-to-Action, P.S."
+    },
+    {
+      "name": "The Web Copy Formula",
+      "structure": "Headline, Subheadline, Opening, Benefits, Social Proof, Call-to-Action, P.S."
+    },
+    {
+      "name": "The P.R.O.V.E. Formula",
+      "structure": "Promise, Reasons, Objections, Value, Evidence"
+    },
+    {
+      "name": "The F.U.E.L. Framework",
+      "structure": "Facts, Understanding, Emotion, Logic"
+    },
+    {
+      "name": "The 7 Deadly Sins Framework",
+      "structure": "Lust, Gluttony, Greed, Sloth, Wrath, Envy, Pride"
+    },
+    {
+      "name": "The 4 I's of Storytelling",
+      "structure": "Introduction, Incident, Insight, Impact"
+    },
+    {
+      "name": "The S.U.P.E.R. Framework",
+      "structure": "Story, Urgency, Promise, Evidence, Request"
+    },
+    {
+      "name": "The Narrative Arc Framework",
+      "structure": "Exposition, Rising Action, Climax, Falling Action, Resolution"
+    },
+    {
+      "name": "The C.O.D.E. Formula",
+      "structure": "Capture Attention, Offer Value, Demonstrate Benefits, Encourage Action"
+    },
+    {
+      "name": "The C.U.R.E. Framework",
+      "structure": "Clarity, Uniqueness, Relevance, Empathy"
+    },
+    {
+      "name": "The G.R.A.S.P. Framework",
+      "structure": "Goal, Roadblocks, Audience, Strategy, Presentation"
+    },
+    {
+      "name": "The R.A.C.E. Formula",
+      "structure": "Reach, Act, Convert, Engage"
+    },
+    {
+      "name": "The P.O.W.E.R. Framework",
+      "structure": "Promise, Objections, Why Now, Evidence, Request"
+    },
+    {
+      "name": "The A.C.A. Formula",
+      "structure": "Attention, Capture, Action"
+    },
+    {
+      "name": "The S.P.I.N. Framework",
+      "structure": "Situation, Problem, Implication, Need-Payoff"
+    },
+    {
+      "name": "The C.U.T. Formula",
+      "structure": "Curiosity, Urgency, Temptation"
+    },
+    {
+      "name": "The M.I.C.E. Framework",
+      "structure": "Message, Image, Content, Execution"
+    },
+    {
+      "name": "The B.A.N.K. System",
+      "structure": "Blueprint, Action, Nurturing, Knowledge"
+    },
+    {
+      "name": "The S.O.S. Copywriting Formula",
+      "structure": "Soul, Offer, Speed"
+    },
+    {
+      "name": "The R.O.A.D. to Success",
+      "structure": "Results, Obstacles, Actions, Decision"
+    },
+    {
+      "name": "The T.I.M.E. Framework",
+      "structure": "Target, Impact, Message, Experience"
+    },
+    {
+      "name": "The H.O.T.S. Formula",
+      "structure": "Hook, Offer, Tease, Scarcity"
+    },
+    {
+      "name": "The A.C.T.S. Copywriting Formula",
+      "structure": "Attention, Connection, Transformation, Solution"
+    },
+    {
+      "name": "The 3 P's of Selling",
+      "structure": "Problem, Possibilities, Plan"
+    },
+    {
+      "name": "The A.R.M.S. Framework",
+      "structure": "Awareness, Relationship, Monetization, Scaling"
+    },
+    {
+      "name": "The E.S.P.R.I.T. Formula",
+      "structure": "Emotion, Specificity, Power, Relevance, Impact, Timing"
+    },
+    {
+      "name": "The P.R.I.M.E. Framework",
+      "structure": "Promise, Reasons, Imagination, Motivation, Evidence"
+    },
+    {
+      "name": "The S.C.O.R.E. Formula",
+      "structure": "Strategy, Context, Optimization, Results, Execution"
+    },
+    {
+      "name": "The 6 M's of Marketing",
+      "structure": "Mission, Market, Message, Media, Money, Measurement"
+    },
+    {
+      "name": "The P.R.I.C.E. Framework",
+      "structure": "Preset, Reciprocation, Identity, Consistency, Expectations"
+    },
+    {
+      "name": "The S.W.A.P. Framework",
+      "structure": "Situation, Wants, Achievements, Problem"
+    },
+    {
+      "name": "The 4 R's of Marketing",
+      "structure": "Research, Rationale, Resources, Results"
+    },
+    {
+      "name": "The T.R.U.S.T. Formula",
+      "structure": "Target, Relatability, Uniqueness, Simplicity, Testimonials"
+    },
+    {
+      "name": "The 4 C's of Branding",
+      "structure": "Clarity, Credibility, Consistency, Constancy"
+    },
+    {
+      "name": "The 7 P's of Marketing",
+      "structure": "Product, Price, Promotion, Place, People, Process, Physical Evidence"
+    },
+    {
+      "name": "The P.R.I.S.M. Framework",
+      "structure": "Pain, Results, Information, Solution, Motivation"
+    },
+    {
+      "name": "The P.O.P.S. Formula",
+      "structure": "Problem, Opportunity, Promise, Solution"
+    },
+    {
+      "name": "The R.A.I.S.E. Framework",
+      "structure": "Reveal, Amplify, Illuminate, Solve, Energize"
+    },
+    {
+      "name": "The C.A.R.P. Framework",
+      "structure": "Copy, Appearance, Response, Product"
+    },
+    {
+      "name": "The P.O.E.T. Formula",
+      "structure": "Premise, Offer, Emotion, Transformation"
+    },
+    {
+      "name": "The C.R.A.F.T. Framework",
+      "structure": "Connection, Results, Authenticity, Focus, Transformation"
+    },
+    {
+      "name": "The S.T.O.R.Y. Selling System",
+      "structure": "Situation, Transformation, Obstacles, Results, You"
+    },
+    {
+      "name": "The S.I.M.P.L.E. Formula",
+      "structure": "Straightforward, Informational, Memorable, Personal, Lively, Engaging"
+    },
+    {
+      "name": "The T.R.I.B.E. Framework",
+      "structure": "Trust, Results, Identity, Belonging, Engagement"
+    },
+    {
+      "name": "The H.E.A.R.T. Formula",
+      "structure": "Hook, Empathy, Authority, Results, Testimonials"
+    },
+    {
+      "name": "The P.R.E.A.C.H. Framework",
+      "structure": "Problem, Reveal, Empower, Action, Connection, Hope"
+    },
+    {
+      "name": "The L.A.W.S. of Persuasion",
+      "structure": "Likeability, Authority, Witness, Scarcity"
+    },
+    {
+      "name": "The S.P.A.R.K. Formula",
+      "structure": "Story, Problem, Answer, Results, Knowledge"
+    },
+    {
+      "name": "The P.R.O.M.O. Framework",
+      "structure": "Promise, Reasons, Offer, Motivation, Objections"
+    },
+    {
+      "name": "The C.A.L.L. Formula",
+      "structure": "Captivate, Activate, Liberate, Leverage"
+    },
+    {
+      "name": "The B.U.I.L.D. Framework",
+      "structure": "Belief, Uniqueness, Interaction, Longevity, Demand"
+    },
+    {
+      "name": "The L.E.G.O. Formula",
+      "structure": "Leverage, Empathy, Goal, Outcome"
+    },
+    {
+      "name": "The M.A.P.S. Framework",
+      "structure": "Mindset, Audience, Promise, Solution"
+    },
+    {
+      "name": "The F.R.E.S.H. Formula",
+      "structure": "Facts, Relatability, Emotion, Story, Hope"
+    },
+    {
+      "name": "The S.A.F.E. System",
+      "structure": "Simple, Actionable, Fun, Effective"
+    },
+    {
+      "name": "The D.R.I.V.E. Framework",
+      "structure": "Desire, Roadblocks, Investment, Vision, Execution"
+    },
+    {
+      "name": "The P.E.A.C.E. Formula",
+      "structure": "Problem, Emotion, Action, Consequences, Empower"
+    },
+    {
+      "name": "The 5 A's of Conversion",
+      "structure": "Attention, Attraction, Affinity, Authority, Action"
+    },
+    {
+      "name": "The L.O.V.E. Framework",
+      "structure": "Listen, Observe, Validate, Empathize"
+    },
+    {
+      "name": "The P.I.E.S. Formula",
+      "structure": "Problem, Idea, Evidence, Solution"
+    },
+    {
+      "name": "The B.R.A.N.D. Framework",
+      "structure": "Build, Relate, Assess, Nurture, Deliver"
+    },
+    {
+      "name": "The G.R.O.W. Formula",
+      "structure": "Goals, Reality, Obstacles, Way Forward"
+    },
+    {
+      "name": "The M.A.G.I.C. Formula",
+      "structure": "Market, Audience, Goals, Insights, Creative Strategy"
+    },
+    {
+      "name": "The A.R.T.I.S.T. Framework",
+      "structure": "Attention, Relevance, Trust, Interest, Satisfaction, Transformation"
+    },
+    {
+      "name": "The S.P.E.C.T.R.U.M. Formula",
+      "structure": "Specificity, Promise, Empathy, Clarity, Testimonials, Risk Reversal, Urgency, Motivation"
+    },
+    {
+      "name": "The C.O.M.P.L.E.X. Framework",
+      "structure": "Context, Objections, Motivation, Proof, Leverage, Execution, eXperience"
+    },
+    {
+      "name": "The I.M.P.A.C.T. Formula",
+      "structure": "Identify, Message, Proof, Action, Commitment, Testimonials"
+    },
+    {
+      "name": "The S.Y.N.E.R.G.Y. Framework",
+      "structure": "Situation, Your Solution, Needs, Evidence, Results, Guarantee, Yes Factor"
+    },
+    {
+      "name": "The P.E.R.F.E.C.T. Formula",
+      "structure": "Problem, Empathy, Results, Features, Examples, Commitment, Testimonials"
+    },
+    {
+      "name": "The I.N.F.L.U.E.N.C.E. Framework",
+      "structure": "Intent, Needs, Feelings, Language, Understanding, Experiences, Negotiation, Commitment"
+    },
+    {
+      "name": "The A.S.P.I.R.E. Formula",
+      "structure": "Attention, Story, Problem, Imagination, Resolution, Engagement"
+    },
+    {
+      "name": "The M.A.S.T.E.R.Y. Framework",
+      "structure": "Mindset, Audience, Strategy, Tactics, Execution, Results, Your Signature"
+    },
+    {
+      "name": "The E.X.T.R.A.O.R.D.I.N.A.R.Y. Formula",
+      "structure": "Engage, eXplore, Transform, Relevance, Amplify, Observe, Results, Details, Inspire, Nurture, Action, Reinforce, Your Voice"
+    },
+    {
+      "name": "The L.E.A.D.E.R.S.H.I.P. Framework",
+      "structure": "Lead, Empathize, Analyze, Define, Execute, Review, Sustain, Highlight, Iterate, Pivot"
+    },
+    {
+      "name": "The C.R.E.A.T.I.V.I.T.Y. Formula",
+      "structure": "Curiosity, Research, Empathy, Action, Testing, Imagination, Validation, Iteration, Tenacity, Your Signature"
+    },
+    {
+      "name": "The S.T.R.A.T.E.G.I.Z.E. Framework",
+      "structure": "Situation, Target, Resources, Action, Timeframe, Evaluation, Goals, Implementation, Zeal, Execution"
+    },
+    {
+      "name": "The C.O.N.V.E.R.S.A.T.I.O.N. Formula",
+      "structure": "Connection, Objective, Needs, Values, Emotions, Results, Solutions, Actions, Trust, Inspiration, Objections, Next Steps"
+    },
+    {
+      "name": "The D.E.T.A.I.L.S. Framework",
+      "structure": "Define, Empathize, Transform, Action, Illustrate, Learn, Sustain"
+    },
+    {
+      "name": "The A.D.V.A.N.C.E. Formula",
+      "structure": "Attention, Desire, Validation, Action, Nurturing, Commitment, Engagement"
+    },
+    {
+      "name": "The I.N.T.E.G.R.A.T.E. Framework",
+      "structure": "Identify, Nurture, Transform, Engage, Goals, Results, Action, Test, Evaluate"
+    },
+    {
+      "name": "The P.R.O.G.R.E.S.S. Formula",
+      "structure": "Promise, Reasons, Obstacles, Goals, Results, Engagement, Sustain, Share"
+    },
+    {
+      "name": "The S.U.C.C.E.S.S.F.U.L. Framework",
+      "structure": "Situation, Understanding, Challenges, Commitment, Empathy, Strategy, Solutions, Features, Urgency, Leverage, Longevity"
+    }
+  ]
+}
