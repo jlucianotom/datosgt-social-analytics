@@ -1,0 +1,42 @@
+name: Analisis diario DatosGT
+
+on:
+  schedule:
+    - cron: "0 12 * * *"  # 12:00 UTC = 06:00 Guatemala (UTC-6, sin horario de verano)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Correr analisis diario
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_BUSINESS_ACCOUNT_ID: ${{ secrets.IG_BUSINESS_ACCOUNT_ID }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_ACCESS_TOKEN: ${{ secrets.TIKTOK_ACCESS_TOKEN }}
+          TIKTOK_OPEN_ID: ${{ secrets.TIKTOK_OPEN_ID }}
+        run: |
+          cd scripts
+          python run_daily.py
+
+      - name: Guardar el reporte de vuelta al repo
+        run: |
+          git config user.name "datosgt-bot"
+          git config user.email "actions@github.com"
+          git add reports/
+          git diff --cached --quiet && echo "Sin cambios en reportes" || git commit -m "Reporte automatico $(date +%Y-%m-%d)"
+          git push
