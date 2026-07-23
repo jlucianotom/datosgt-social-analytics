@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dashboard DatosGT — Contenido</title>
+<style>
+  :root {
+    --bg: #000000; --bg2: #0d0d0c; --bg3: #161615;
+    --border: rgba(255,255,255,.10); --text: #f5f4f1; --muted: #93918a;
+    --accent: #c9a84c; --good: #4caf7d; --bad: #d9694f;
+  }
+  :root[data-theme="light"] {
+    --bg: #faf9f6; --bg2: #f1efe9; --bg3: #e8e5dc;
+    --border: rgba(0,0,0,.12); --text: #16150f; --muted: #6b6759;
+    --accent: #a6842f; --good: #2f8f5c; --bad: #b8452e;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #faf9f6; --bg2: #f1efe9; --bg3: #e8e5dc;
+      --border: rgba(0,0,0,.12); --text: #16150f; --muted: #6b6759;
+      --accent: #a6842f; --good: #2f8f5c; --bad: #b8452e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,"Segoe UI",Arial,sans-serif; line-height:1.5; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 48px 24px 100px; }
+  .eyebrow { font-family: ui-monospace, Consolas, monospace; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin:0 0 10px; }
+  h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight:800; margin:0 0 6px; letter-spacing:-.01em; }
+  .subtitle { color: var(--muted); font-size:.9rem; margin: 0 0 32px; }
+
+  .stat-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin-bottom:36px; }
+  .stat-tile { background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:18px 20px; }
+  .stat-tile .label { font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:8px; }
+  .stat-tile .value { font-size:1.7rem; font-weight:800; font-variant-numeric: tabular-nums; }
+  .stat-tile .value.good { color: var(--good); }
+  .stat-tile .value.bad { color: var(--bad); }
+  .stat-tile .value.neutral { color: var(--text); }
+  .stat-tile .sub { font-size:.76rem; color:var(--muted); margin-top:4px; }
+
+  .rec-box { background: color-mix(in srgb, var(--accent) 12%, var(--bg2)); border:1px solid color-mix(in srgb, var(--accent) 45%, transparent); border-radius:10px; padding:18px 22px; margin-bottom:36px; font-size:.94rem; }
+  .rec-box .rl { font-family: ui-monospace, Consolas, monospace; font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; color:var(--accent); display:block; margin-bottom:8px; }
+
+  section { margin-bottom:40px; }
+  h2 { font-size:1.05rem; font-weight:700; margin:0 0 4px; }
+  .section-sub { font-size:.82rem; color:var(--muted); margin:0 0 18px; }
+
+  .bar-chart, .line-chart { width:100%; height:auto; overflow: visible; }
+  .bar-label { font-size:12px; fill:var(--muted); }
+  .bar-value { font-size:12px; fill:var(--text); font-variant-numeric: tabular-nums; }
+  .bar-track { fill: var(--bg3); }
+  .bar-fill { transition: opacity .15s; }
+  .bar-row:hover .bar-fill { opacity:.85; }
+  .gridline { stroke: var(--border); stroke-width:1; }
+  .axis-label { font-size:11px; fill:var(--muted); }
+  .line-dot { cursor:pointer; }
+  .empty { color:var(--muted); font-size:.85rem; }
+
+  .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:12px; }
+  .post-card { display:block; background:var(--bg2); border:1px solid var(--border); border-left:3px solid var(--good); border-radius:0 8px 8px 0; padding:14px 16px; text-decoration:none; color:var(--text); }
+  .post-card.bad { border-left-color: var(--bad); }
+  .post-card .post-pct { font-size:1.2rem; font-weight:800; font-variant-numeric: tabular-nums; }
+  .post-card.good .post-pct { color: var(--good); }
+  .post-card.bad .post-pct { color: var(--bad); }
+  .post-card .post-meta { font-size:.72rem; color:var(--muted); margin: 4px 0 8px; }
+  .post-card .post-text { font-size:.84rem; opacity:.9; }
+
+  .hours-line { font-size:.9rem; color:var(--text); font-variant-numeric: tabular-nums; }
+  footer { color:var(--muted); font-family: ui-monospace, Consolas, monospace; font-size:.72rem; margin-top: 50px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">DatosGT · Dashboard de contenido</p>
+    <h1>Que subir y que mejorar</h1>
+    <p class="subtitle">Actualizado automaticamente cada dia · 2026-07-22 23:13 · 641 publicaciones analizadas</p>
+
+    <div class="stat-row">
+      <div class="stat-tile">
+        <div class="label">Engagement 30 dias</div>
+        <div class="value">5.0%</div>
+        <div class="sub">78 posts recientes</div>
+      </div>
+      <div class="stat-tile">
+        <div class="label">Tendencia (30 vs 90 dias)</div>
+        <div class="value bad">&#8595; bajando</div>
+        <div class="sub">-0.4 puntos</div>
+      </div>
+      <div class="stat-tile">
+        <div class="label">Mejor pilar</div>
+        <div class="value good" style="font-size:1.1rem">A · Habilidad/Carrera</div>
+        <div class="sub">4.5% ER</div>
+      </div>
+      <div class="stat-tile">
+        <div class="label">Mejor horario</div>
+        <div class="value neutral" style="font-size:1.3rem">14:00</div>
+        <div class="sub">14:00 (8.6%) · 18:00 (7.1%) · 19:00 (5.5%)</div>
+      </div>
+    </div>
+
+    <div class="rec-box">
+      <span class="rl">Recomendacion de hoy</span>
+      Prioriza el pilar <strong>A · Habilidad/Carrera</strong> (4.5% ER) y reduce o replantea <strong>D · Actualidad/deportes</strong> (2.1% ER). Publica cerca de las <strong>14:00</strong>.
+    </div>
+
+    <section>
+      <h2>Engagement por pilar de contenido</h2>
+      <p class="section-sub">Clasificado automaticamente segun el texto de cada post</p>
+      <svg viewBox="0 0 640 240" class="bar-chart" role="img" aria-label="grafico de barras">
+        <g transform="translate(0,0)" class="bar-row">
+          <text x="178" y="17.0" text-anchor="end" dominant-baseline="middle" class="bar-label">Otro / sin clasificar</text>
+          <rect x="190" y="7.48" width="390" height="19.040000000000003" rx="4" class="bar-track"/>
+          <rect x="190" y="7.48" width="390.0" height="19.040000000000003" rx="4" fill="#c9a84c" class="bar-fill">
+            <title>Otro / sin clasificar: 4.8% (n=127)</title>
+          </rect>
+          <text x="590.0" y="17.0" dominant-baseline="middle" class="bar-value">4.8%</text>
+        </g>
+        <g transform="translate(0,48)" class="bar-row">
+          <text x="178" y="17.0" text-anchor="end" dominant-baseline="middle" class="bar-label">A · Habilidad/Carrera</text>
+          <rect x="190" y="7.48" width="390" height="19.040000000000003" rx="4" class="bar-track"/>
+          <rect x="190" y="7.48" width="364.798222563679" height="19.040000000000003" rx="4" fill="#c9a84c" class="bar-fill">
+            <title>A · Habilidad/Carrera: 4.5% (n=305)</title>
+          </rect>
+          <text x="564.798222563679" y="17.0" dominant-baseline="middle" class="bar-value">4.5%</text>
+        </g>
+        <g transform="translate(0,96)" class="bar-row">
+          <text x="178" y="17.0" text-anchor="end" dominant-baseline="middle" class="bar-label">G · IA/Tech</text>
+          <rect x="190" y="7.48" width="390" height="19.040000000000003" rx="4" class="bar-track"/>
+          <rect x="190" y="7.48" width="356.571709133721" height="19.040000000000003" rx="4" fill="#c9a84c" class="bar-fill">
+            <title>G · IA/Tech: 4.4% (n=66)</title>
+          </rect>
+          <text x="556.571709133721" y="17.0" dominant-baseline="middle" class="bar-value">4.4%</text>
+        </g>
+        <g transform="translate(0,144)" class="bar-row">
+          <text x="178" y="17.0" text-anchor="end" dominant-baseline="middle" class="bar-label">B · Datos de negocio</text>
+          <rect x="190" y="7.48" width="390" height="19.040000000000003" rx="4" class="bar-track"/>
+          <rect x="190" y="7.48" width="336.558015281763" height="19.040000000000003" rx="4" fill="#c9a84c" class="bar-fill">
+            <title>B · Datos de negocio: 4.1% (n=110)</title>
+          </rect>
+          <text x="536.558015281763" y="17.0" dominant-baseline="middle" class="bar-value">4.1%</text>
+        </g>
+        <g transform="translate(0,192)" class="bar-row">
+          <text x="178" y="17.0" text-anchor="end" dominant-baseline="middle" class="bar-label">D · Actualidad/deportes</text>
+          <rect x="190" y="7.48" width="390" height="19.040000000000003" rx="4" class="bar-track"/>
+          <rect x="190" y="7.48" width="174.40719836610086" height="19.040000000000003" rx="4" fill="#c9a84c" class="bar-fill">
+            <title>D · Actualidad/deportes: 2.1% (n=7)</title>
+          </rect>
+          <text x="374.40719836610083" y="17.0" dominant-baseline="middle" class="bar-value">2.1%</text>
+        </g></svg>
+    </section>
+
+    <section>
+      <h2>Engagement por formato</h2>
+      <p class="section-sub">Reels vs Feed/Carrusel</p>
+      <svg viewBox="0 0 640 96" class="bar-chart" role="img" aria-label="grafico de barras">
+        <g transform="translate(0,0)" class="bar-row">
+          <text x="178" y="17.0" text-anchor="end" dominant-baseline="middle" class="bar-label">FEED</text>
+          <rect x="190" y="7.48" width="390" height="19.040000000000003" rx="4" class="bar-track"/>
+          <rect x="190" y="7.48" width="390.0" height="19.040000000000003" rx="4" fill="#8a8a8a" class="bar-fill">
+            <title>FEED: 6.1% (n=71)</title>
+          </rect>
+          <text x="590.0" y="17.0" dominant-baseline="middle" class="bar-value">6.1%</text>
+        </g>
+        <g transform="translate(0,48)" class="bar-row">
+          <text x="178" y="17.0" text-anchor="end" dominant-baseline="middle" class="bar-label">REELS</text>
+          <rect x="190" y="7.48" width="390" height="19.040000000000003" rx="4" class="bar-track"/>
+          <rect x="190" y="7.48" width="269.33171754117166" height="19.040000000000003" rx="4" fill="#8a8a8a" class="bar-fill">
+            <title>REELS: 4.2% (n=544)</title>
+          </rect>
+          <text x="469.33171754117166" y="17.0" dominant-baseline="middle" class="bar-value">4.2%</text>
+        </g></svg>
+    </section>
+
+    <section>
+      <h2>Tendencia mensual</h2>
+      <p class="section-sub">Engagement rate promedio, ultimos 12 meses</p>
+      <svg viewBox="0 0 680 220" class="line-chart" role="img" aria-label="tendencia de engagement">
+      <line x1="50" y1="20" x2="660" y2="20" class="gridline"/><line x1="50" y1="105.0" x2="660" y2="105.0" class="gridline"/><line x1="50" y1="190" x2="660" y2="190" class="gridline"/>
+      <path d="M 50.0,162.4 L 105.5,190.0 L 160.9,176.9 L 216.4,103.6 L 271.8,160.9 L 327.3,165.5 L 382.7,165.2 L 438.2,36.2 L 493.6,33.9 L 549.1,45.1 L 604.5,20.0 L 660.0,72.5 L 660.0,190 L 50.0,190 Z" class="line-area" fill="#c9a84c" opacity="0.12"/>
+      <path d="M 50.0,162.4 L 105.5,190.0 L 160.9,176.9 L 216.4,103.6 L 271.8,160.9 L 327.3,165.5 L 382.7,165.2 L 438.2,36.2 L 493.6,33.9 L 549.1,45.1 L 604.5,20.0 L 660.0,72.5" fill="none" stroke="#c9a84c" stroke-width="2.5" class="line-path"/>
+      <circle cx="50.0" cy="162.4" r="4" fill="#c9a84c" class="line-dot"><title>2025-08: 2.9%</title></circle><circle cx="105.5" cy="190.0" r="4" fill="#c9a84c" class="line-dot"><title>2025-09: 2.3%</title></circle><circle cx="160.9" cy="176.9" r="4" fill="#c9a84c" class="line-dot"><title>2025-10: 2.6%</title></circle><circle cx="216.4" cy="103.6" r="4" fill="#c9a84c" class="line-dot"><title>2025-11: 4.2%</title></circle><circle cx="271.8" cy="160.9" r="4" fill="#c9a84c" class="line-dot"><title>2025-12: 2.9%</title></circle><circle cx="327.3" cy="165.5" r="4" fill="#c9a84c" class="line-dot"><title>2026-01: 2.8%</title></circle><circle cx="382.7" cy="165.2" r="4" fill="#c9a84c" class="line-dot"><title>2026-02: 2.8%</title></circle><circle cx="438.2" cy="36.2" r="4" fill="#c9a84c" class="line-dot"><title>2026-03: 5.6%</title></circle><circle cx="493.6" cy="33.9" r="4" fill="#c9a84c" class="line-dot"><title>2026-04: 5.7%</title></circle><circle cx="549.1" cy="45.1" r="4" fill="#c9a84c" class="line-dot"><title>2026-05: 5.4%</title></circle><circle cx="604.5" cy="20.0" r="4" fill="#c9a84c" class="line-dot"><title>2026-06: 6.0%</title></circle><circle cx="660.0" cy="72.5" r="4" fill="#c9a84c" class="line-dot"><title>2026-07: 4.8%</title></circle>
+      <text x="50.0" y="212" text-anchor="middle" class="axis-label">08</text><text x="160.9" y="212" text-anchor="middle" class="axis-label">10</text><text x="271.8" y="212" text-anchor="middle" class="axis-label">12</text><text x="382.7" y="212" text-anchor="middle" class="axis-label">02</text><text x="493.6" y="212" text-anchor="middle" class="axis-label">04</text><text x="604.5" y="212" text-anchor="middle" class="axis-label">06</text>
+    </svg>
+    </section>
+
+    <section>
+      <h2>Top 5 — replica este angulo</h2>
+      <div class="card-grid"><a href="https://www.instagram.com/reel/Czlr1w3LWWW/" target="_blank" class="post-card good">
+      <div class="post-pct">32.3%</div>
+      <div class="post-meta">B · Datos de negocio · alcance 31</div>
+      <div class="post-text">"En el análisis de datos, destacamos el detalle en cada momento para tomar decisiones prec</div>
+    </a><a href="https://www.instagram.com/reel/DZOb2VFNuJX/" target="_blank" class="post-card good">
+      <div class="post-pct">20.0%</div>
+      <div class="post-meta">A · Habilidad/Carrera · alcance 70</div>
+      <div class="post-text">Excel no se trata solo de fórmulas.  Aprende a organizar información, analizar datos y cre</div>
+    </a><a href="https://www.instagram.com/p/DX8QEejFI2x/" target="_blank" class="post-card good">
+      <div class="post-pct">20.0%</div>
+      <div class="post-meta">B · Datos de negocio · alcance 210</div>
+      <div class="post-text">Primera vez en Panamá. Y no vine de turista.  Vine a hablar de datos. De decisiones. De tr</div>
+    </a><a href="https://www.instagram.com/reel/C-dNCv5vZ4e/" target="_blank" class="post-card good">
+      <div class="post-pct">19.4%</div>
+      <div class="post-meta">Otro / sin clasificar · alcance 175</div>
+      <div class="post-text">Reto sobre análisis de Datos. Hoy finalizamos el taller en el @cmeguatemala . . . . . #big</div>
+    </a><a href="https://www.instagram.com/p/DQxE5VDDxxF/" target="_blank" class="post-card good">
+      <div class="post-pct">18.5%</div>
+      <div class="post-meta">Otro / sin clasificar · alcance 363</div>
+      <div class="post-text">💼 ¿Buscando trabajo o renovando tu CV?  Este es el formato que recomiendan en Harvard y us</div>
+    </a></div>
+    </section>
+
+    <section>
+      <h2>Bottom 5 — evita este patron</h2>
+      <div class="card-grid"><a href="https://www.instagram.com/p/DawKOLIjVju/" target="_blank" class="post-card bad">
+      <div class="post-pct">0.0%</div>
+      <div class="post-meta">D · Actualidad/deportes · alcance 41</div>
+      <div class="post-text">Inglaterra vs Argentina, semifinal 2. La rivalidad más marcada del fútbol. 👇  5 datos ante</div>
+    </a><a href="https://www.instagram.com/p/DamV3RFDfnh/" target="_blank" class="post-card bad">
+      <div class="post-pct">0.0%</div>
+      <div class="post-meta">B · Datos de negocio · alcance 48</div>
+      <div class="post-text">¿Pagarías $2.000 por el primer iPhone plegable de la historia?  Lo que se sabe de la gran </div>
+    </a><a href="https://www.instagram.com/p/DUWWjapj7bf/" target="_blank" class="post-card bad">
+      <div class="post-pct">0.0%</div>
+      <div class="post-meta">B · Datos de negocio · alcance 52</div>
+      <div class="post-text">🚀 El ciclo de vida de un Project Manager en Ciencia de Datos Muchos creen que un proyecto </div>
+    </a><a href="https://www.instagram.com/reel/DTVqGC2iXaQ/" target="_blank" class="post-card bad">
+      <div class="post-pct">0.0%</div>
+      <div class="post-meta">G · IA/Tech · alcance 188</div>
+      <div class="post-text">El Model Context Protocol (MCP) de Anthropic es un estándar abierto que permite conectar m</div>
+    </a><a href="https://www.instagram.com/reel/DQp9AAOjRc-/" target="_blank" class="post-card bad">
+      <div class="post-pct">0.0%</div>
+      <div class="post-meta">Otro / sin clasificar · alcance 44</div>
+      <div class="post-text">42|100 ¿Qué #lA conoces y es más eficiente?</div>
+    </a></div>
+    </section>
+
+    <footer>Generado automaticamente por GitHub Actions · datosgt-social-analytics</footer>
+  </div>
+</body>
+</html>
