@@ -5,12 +5,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# Orden importa: se revisan de arriba a abajo y gana el primer match. Los
+# pilares con senales mas especificas/raras van primero para que no los tape
+# un pilar generico como B (que comparte vocabulario con casi todo).
 PILLAR_KEYWORDS = {
+    "F · Historia personal": ["primera vez", "orgullos", "patrocin", "vine a", "aniversario"],
+    "G · IA/Tech": ["chatgpt", "openai", "gpt-", " ia ", "inteligencia artificial", "model context protocol", " mcp "],
+    "D · Actualidad/deportes": [" vs ", "mundial", "eurocopa", "seleccion", "partido"],
     "A · Habilidad/Carrera": ["python", "sql", "excel", "power bi", "aprend", "curso", "habilidad", "carrera"],
     "B · Datos de negocio": ["margen", "precio", "kpi", "cliente", "venta", "costo", "negocio", "rentab"],
-    "F · Historia personal": ["primera vez", "orgullos", "patrocin", "vine a", "aniversario"],
-    "G · IA/Tech": ["chatgpt", "openai", "gpt-", "ia ", "inteligencia artificial"],
-    "D · Actualidad/deportes": ["vs", "mundial", "eurocopa", "seleccion", "partido"],
 }
 
 
